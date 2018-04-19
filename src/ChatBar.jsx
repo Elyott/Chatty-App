@@ -9,6 +9,7 @@ class ChatBar extends Component {
       content: ''
     }
 
+    this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onUser = this.onUser.bind(this);
     this.onContent = this.onContent.bind(this);
     this.onPost = this.onPost.bind(this);
@@ -20,7 +21,6 @@ class ChatBar extends Component {
     });
   }
 
-
   onContent (event) {
     this.setState({
       content: event.target.value
@@ -28,22 +28,25 @@ class ChatBar extends Component {
   }
 
   onPost(event){
-    if (event.key == "Enter"){
-      this.props.onNewMessage(this.state);
-      // this.setState({
-      //   user: '',
-      //   content: ''
-      // });
+    if (event.key === "Enter"){
+      this.props.onNewMessage(this.state.content);
+      event.target.value = "";
     }
+  }
 
+  onChangeUsername(event){
+    if (event.key === "Enter"){
+      this.props.onNewUser(this.state.user);
+    }
   }
 
   render() {
     return (
         <footer className="chatbar">
-            <input className="chatbar-username" onInput={this.onUser} />
-            <input className="chatbar-message" placeholder="Type a message and hit ENTER" onInput={this.onContent}
-            onKeyUp={this.onPost}
+            <input id="usernameInput" className="chatbar-username" placeholder="Username..." onInput={this.onUser}
+            onKeyPress={this.onChangeUsername} />
+            <input id="messageInput" className="chatbar-message" placeholder="Type a message and hit ENTER" onInput={this.onContent}
+            onKeyPress={this.onPost}
             />
         </footer>
     );
