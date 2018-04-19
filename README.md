@@ -1,11 +1,21 @@
-React Boilerplate
+Chatta App
 =====================
 
-A minimal and light dev environment for ReactJS.
+Chatta is a real time chat web application using React, Websocket, Babel, and Webpack.
+
+Chatta allows clients to communicate with each other without ever reloading the page.
+Chatta allows clients to choose and update an username. 
+Each client is given a random colour that persists even if they change usernames.
+Users can post text messages as well as jpg, png and gif urls.
+The number of clients connected is displayed at the top of the page.
+
+### Screenshots
+
+
 
 ### Usage
 
-Clone the boilerplate and create your own git repo.
+Clone the Chatty-App and create your own git repo.
 
 ```
 git clone git@github.com:lighthouse-labs/react-simple-boilerplate.git
