@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 
-
 function Navbar ({usersOnline}) {
     return (
         <nav className="navbar">

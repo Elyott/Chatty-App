@@ -31,7 +31,7 @@ class ChatBar extends Component {
 
   //when user hits enter in content input field a new message is created
   onPost(event){
-    if (event.key === "Enter"){
+    if (event.key === 'Enter'){
       this.props.onNewMessage(this.state.content);
       event.target.value = '';
       this.setState({content: ''})
@@ -40,17 +40,17 @@ class ChatBar extends Component {
 
   //when user hits enter in username input field a new notification is created
   onChangeUsername(event){
-    if (event.key === "Enter"){
+    if (event.key === 'Enter'){
       this.props.onNewUser(this.state.user);
     }
   }
 
   render() {
     return (
-        <footer className="chatbar">
-            <input id="usernameInput" className="chatbar-username" placeholder="Username..." onInput={this.onUser}
+        <footer className='chatbar'>
+            <input id='usernameInput' className='chatbar-username' placeholder='Username...' onInput={this.onUser}
             onKeyPress={this.onChangeUsername} />
-            <input id="messageInput" className="chatbar-message" placeholder="Type a message and hit ENTER" onInput={this.onContent}
+            <input id='messageInput' className='chatbar-message' placeholder='Type a message and hit ENTER' onInput={this.onContent}
             onKeyPress={this.onPost}
             />
         </footer>

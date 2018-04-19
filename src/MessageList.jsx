@@ -7,7 +7,7 @@ class MessageList extends Component {
   //creates a component for each message
     const messageComponents = this.props.messages.map(message => (<Message key={message.id} message={message} /> ))
     return (
-      <div id="message-list">
+      <div id='message-list'>
         {messageComponents}
       </div>
     );

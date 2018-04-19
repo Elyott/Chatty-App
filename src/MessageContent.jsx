@@ -53,9 +53,9 @@ class MessageContent extends Component {
   render() {
       //creates a img component for each image below the message
       const imageComponents = this.state.images.map((image, index) =>
-        (<img key={index} className="message-image" style={{borderColor: this.props.userColor}} src={image}/>))
+        (<img key={index} className='message-image' style={{borderColor: this.props.userColor}} src={image}/>))
       return (
-        <span className="message-content">
+        <span className='message-content'>
           {this.state.content}
           <br/>
           {imageComponents}
