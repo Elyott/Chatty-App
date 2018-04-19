@@ -13,6 +13,10 @@ The number of clients connected is displayed at the top of the page.
 
 ![Messages With Images](https://github.com/Elyott/Chatty-App/blob/master/docs/Messages%20with%20images.png?raw=true)
 
+![User Changes Name](https://github.com/Elyott/Chatty-App/blob/master/docs/Bob%20changes%20his%20name.png?raw=true)
+
+![Users Disconnect](https://github.com/Elyott/Chatty-App/blob/master/docs/Users%20Disconnected.png?raw=true)
+
 ### Usage
 
 Clone the Chatty-App and create your own git repo.
