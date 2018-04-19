@@ -21,7 +21,7 @@ class App extends Component {
   componentDidMount() {
     //creates then connects to websocket once page is loaded
     this.socket = new WebSocket('ws://localhost:3001');
-    this.socket.addEventListener('open', function (event) {
+    this.socket.addEventListener('open', () => {
       console.log('Connected to server');
     });
     //listens for incoming messages then sorts them
